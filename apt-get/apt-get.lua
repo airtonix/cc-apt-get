@@ -131,8 +131,6 @@ function setup()
     p = fs.open(packList, "w")
     p.close()
 
-    -- Install package apt-get
-    install("apt-get")
 end
 
 function update()
@@ -298,6 +296,8 @@ elseif args[1] == "upgrade" then
 elseif args[1] == "setup" then
     setup()
     update()
+    -- Install package apt-get
+    install("apt-get")
 else
     print("Argument unknown")
 end
