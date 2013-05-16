@@ -1,6 +1,6 @@
 apt-get
 The package manager himself (testing)
-p m102eGTL
+u https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua
 apt
 apt-get
 fell
