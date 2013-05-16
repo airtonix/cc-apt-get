@@ -11,20 +11,20 @@ me.
 1. Copy this script on a disk :
 
 	
-    local args =  { ... }
-    local res = http.get("https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua")
+`local args =  { ... }
+local res = http.get("https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua")
 
-    if res then
-        local content = res.readAll()
-        res.close()
-        fs.makeDir("apt")
-        local file = fs.open("apt/apt-get", "w")
-        file.write(content)
-        file.close()
-        shell.alias("apt-get", "apt/apt-get")
-    end
+if res then
+    local content = res.readAll()
+    res.close()
+    fs.makeDir("apt")
+    local file = fs.open("apt/apt-get", "w")
+    file.write(content)
+    file.close()
+    shell.setAlias("apt-get", "apt/apt-get")
+end`
 
-(pastebin get rbVg5jHU getapt)
+(pastebin get bRdpFcrD getapt)
 
 2. run the script `> getapt`
 3. run `> apt-get setup`
