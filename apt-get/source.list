@@ -1,130 +1,130 @@
 apt-get
 The package manager himself (testing)
-m102eGTL
+p m102eGTL
 apt
 apt-get
 fell
 A program to fell a single tree trunk
-19Xs1uPL
+p 19Xs1uPL
 felling
 
 turtle-tools
 A list of utilities for turtles
-left right forward back down up reverse drop level refuelall digup digdown dig
+v left right forward back down up reverse drop level refuelall digup digdown dig
 
 virtual
 left
 Turns the turtle left
-UQmPqDZc
+p UQmPqDZc
 tools
 l
 right
 Turns the turtle right
-RSYBt2aE
+p RSYBt2aE
 tools
 r
 forward
 Moves the turtle forward
-6GPVp2Ka
+p 6GPVp2Ka
 tools
 f
 back
 Moves the turtle backward
-7LjxWUvy
+p 7LjxWUvy
 tools
 b
 down
 Moves the turtle down
-GX8y65xc
+p GX8y65xc
 tools
 d
 up
 Moves the turtle up
-CmJJdMFa
+p CmJJdMFa
 tools
 u
 reverse
 Inverts the turtle orientation
-DK7s2f9c
+p DK7s2f9c
 tools
 x
 dig
 Orders the turtle to dig forward
-zA9xBCL6
+p zA9xBCL6
 tools
 
 digup
 Orders the turtle to dig up
-ukFC1pit
+p ukFC1pit
 tools
 
 digdown
 Orders the turtle to dig down
-n9g2sfjQ
+p n9g2sfjQ
 tools
 
 placeforward
 Place item below turtle while forwarding
-3rdWwrTu
+p 3rdWwrTu
 tools
 pf
 level
 Gets turtle fuel level
-Bi2AS9tq
+p Bi2AS9tq
 tools
 lvl
 refuelall
 Refuels the turtle with all the stack on the selected slot
-hMyMs6WS
+p hMyMs6WS
 tools
 rfa
 drop
 Empties the turtle
-ihzq3vcv
+p ihzq3vcv
 tools
 drop
 mining
 A set of mining constructions for Turtles
-escalier digchunk floorchunk
+v escalier digchunk floorchunk
 
 virtual
 slavecomp
 Enslaves a computer
-3rEiVK7e
+p 3rEiVK7e
 rednetctl
 slave
 mastercomp
 Master control computer
-0ty4RdiM
+p 0ty4RdiM
 rednetctl
 master
 master-turtle
 Enslaves a computer
-AinFGwTR
+p AinFGwTR
 wolvan
 wctrl
 slave-turtle
 Slave turtle
-dDbsahn7
+p dDbsahn7
 wolvan
 wwait
 escalier
 Digs a staircase
-LmPNE2Fn
+p LmPNE2Fn
 mining
 
 digchunk
 Dig a chunk (16x16 blocks) on a given height
-c5bxYBnr
+p c5bxYBnr
 mining
 
 floorchunk
 Floors a chunk (16x16) on the layer above
-Bupi2Ssp
+p Bupi2Ssp
 mining
 floorchunk
 nsh
 A network shell for Computercraft
-X5Fysdi4
+p X5Fysdi4
 network
 nsh

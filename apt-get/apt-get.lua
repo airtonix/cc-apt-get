@@ -1,4 +1,5 @@
 -- pastebin get m102eGTL apt-get
+-- wget https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua apt/apt-get
 --
 -- Help
 -- apt-get 
@@ -11,6 +12,19 @@
 srcFile = "apt/source.list"
 packFile = "apt/packages"
 packList = "apt/installed"
+
+function wget(url, file)
+    local result = http.get(url)
+
+    if res then
+        local content = res.readAll()
+        res.close()
+        local file = fs.open(file, "w")
+        file.write(content)
+        file.close()
+    end
+end
+    
 
 function checkFile(name)
     if not fs.exists(name) then
@@ -183,24 +197,38 @@ function install(lookingFor)
     pack.close()
 
     if found then
-        if package.alias == "virtual" then
-            for token in string.gmatch(package.key, "[^%s]+") do
+        for token in string.gmatch(package.key, "[^%s]+") do
+            if token == "v" then
+                mode = "virtual"
+            elseif token == "p" then
+                mode = "pastebin" 
+            elseif token == "u" then 
+                mode = "url"
+            end
+
+            if mode == "v" then
                 install(token)
+            else
+                -- Install it
+                print("Selecting previously deselected package " .. package.name)
+                checkPacklist()
+                list = fs.open(packList, "a")
+                writePackage(list, package)
+                list.close()
+                if not fs.exists(package.directory) then
+                    print ("Creating " .. package.directory)
+                    fs.makeDir(package.directory)
+                end
+                if mode == "p" then
+                    pastebin(package.key, package.directory .. "/" ..package.name)
+                elseif mode == "u" then
+                    wget(package.key,  package.directory .. "/" ..package.name)
+                else
+                    print("Wrong mode!!")
+                end
+                print("Setting up package " .. package.name)
+                shell.setAlias(package.alias, package.directory .. "/" .. package.name)
             end
-        else
-            -- Install it
-            print("Selecting previously deselected package " .. package.name)
-            checkPacklist()
-            list = fs.open(packList, "a")
-            writePackage(list, package)
-            list.close()
-            if not fs.exists(package.directory) then
-                print ("Creating " .. package.directory)
-                fs.makeDir(package.directory)
-            end
-            pastebin(package.key, package.directory .. "/" ..package.name)
-            print("Setting up package " .. package.name)
-            shell.setAlias(package.alias, package.directory .. "/" .. package.name)
         end
     else
         print("Package " .. lookingFor .. " not found")
