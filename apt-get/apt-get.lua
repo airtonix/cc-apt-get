@@ -115,6 +115,8 @@ function setup()
         defaultApt = "https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua apt/apt-get"
     end
 
+    print("The apt/source.list is using the default settings, please edit if necessary")
+
     -- Removing old configuration
     if fs.exists(srcFile) then
         fs.delete(srcFile)
@@ -141,6 +143,7 @@ function update()
     local packKey = source.readLine()
 
 
+    -- Read the installed packages list
     token = string.gmatch(packKey, "[^%s]+")
     if token() == "p" then
         pastebin(token(), packFile)
@@ -189,11 +192,28 @@ function upgrade()
             EOF = true
         else
             -- Upgrade it
-            print("Upgrading package " .. package.name)
-            pastebin(package.key, package.directory .. "/" ..package.name)
-            -- TODO: check for missing Alias
-            -- print("Setting up package " .. package.name)
-            -- shell.setAlias(package.alias, package.directory .. "/" .. package.name)
+            local mode = "none"
+            for token in string.gmatch(package.key, "[^%s]+") do
+                -- Uprading (can't be v)
+                -- If first token, mode is unset
+                if mode == "p" then
+                    print("Upgrading package " .. package.name)
+                    pastebin(package.key, package.directory .. "/" ..package.name)
+                elseif mode == "u" then
+                    print("Upgrading package " .. package.name)
+                    wget(package.key, package.directory .. "/" ..package.name)
+                end
+                
+                -- Mode checking (first token)
+                if token == "p" then
+                    mode = "pastebin" 
+                elseif token == "u" then 
+                    mode = "url"
+                end
+            end
+            -- check for missing Alias
+            print("Resetting package " .. package.name)
+            shell.setAlias(package.alias, package.directory .. "/" .. package.name)
         end
     end
     pack.close()
@@ -220,6 +240,7 @@ function install(lookingFor)
     end
     pack.close()
 
+    local mode = "none"
     if found then
         for token in string.gmatch(package.key, "[^%s]+") do
             if token == "v" then
