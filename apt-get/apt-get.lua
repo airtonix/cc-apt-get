@@ -94,13 +94,22 @@ end
 
 function setup()
     -- First time setup
+    if not fs.exists("apt") then
+        fs.makeDir("apt")
+    end
+
     fs.makeDir("apt")
     local defaultApt
-    print("Please set your apt source pastebin key [default: Vt0v208y]")
-    defaultApt = read()
+    local mode
+    while mode ~= "p" or mode ~= "u" do
+        print("Downloading from pastebin [p] or github/url [u]")
+        mode = read()
+    end
 
-    if defaultApt == "" then
+    if mode == "p" then
         defaultApt = "Vt0v208y"
+    else
+        defaultApt = "https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua apt/apt-get"
     end
 
     if fs.exists(srcFile) then
@@ -108,7 +117,7 @@ function setup()
     end
 
     local src = fs.open(srcFile, "w")
-    src.writeLine(defaultApt)
+    src.writeLine(mode .. " " .. defaultApt)
     src.close()
 
     p = fs.open(packList, "w")
