@@ -207,9 +207,9 @@ function upgrade()
                 
                 -- Mode checking (first token)
                 if token == "p" then
-                    mode = "pastebin" 
+                    mode = "p" 
                 elseif token == "u" then 
-                    mode = "url"
+                    mode = "u"
                 end
             end
             -- check for missing Alias
