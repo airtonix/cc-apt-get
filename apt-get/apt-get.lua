@@ -103,7 +103,7 @@ function setup()
     local defaultApt
     local mode
     -- Choosing mode
-    while mode ~= "p" or mode ~= "u" do
+    while mode ~= "p" and mode ~= "u" do
         print("Downloading from pastebin [p] or github/url [u]")
         mode = read()
     end
