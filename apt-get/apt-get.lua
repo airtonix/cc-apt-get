@@ -16,9 +16,9 @@ packList = "apt/installed"
 function wget(url, file)
     local result = http.get(url)
 
-    if res then
-        local content = res.readAll()
-        res.close()
+    if result then
+        local content = result.readAll()
+        result.close()
         local file = fs.open(file, "w")
         file.write(content)
         file.close()
