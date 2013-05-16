@@ -244,15 +244,9 @@ function install(lookingFor)
     local mode = "none"
     if found then
         for token in string.gmatch(package.key, "[^%s]+") do
-            if token == "v" then
-                mode = "virtual"
-            elseif token == "p" then
-                mode = "pastebin" 
-            elseif token == "u" then 
-                mode = "url"
-            end
-
+            -- Installing (not for first iteration)
             if mode == "v" then
+                -- Virtual package : install all following tokens
                 install(token)
             else
                 -- Install it
@@ -261,10 +255,14 @@ function install(lookingFor)
                 list = fs.open(packList, "a")
                 writePackage(list, package)
                 list.close()
+
+                -- Generating required directory
                 if not fs.exists(package.directory) then
                     print ("Creating " .. package.directory)
                     fs.makeDir(package.directory)
                 end
+
+                -- Download
                 if mode == "p" then
                     pastebin(package.key, package.directory .. "/" ..package.name)
                 elseif mode == "u" then
@@ -272,8 +270,19 @@ function install(lookingFor)
                 else
                     print("Wrong mode!!")
                 end
+
+                -- Alias
                 print("Setting up package " .. package.name)
                 shell.setAlias(package.alias, package.directory .. "/" .. package.name)
+            end
+
+            -- If token is a mode, update the mode variable
+            if token == "v" then
+                mode = "v"
+            elseif token == "p" then
+                mode = "p" 
+            elseif token == "u" then 
+                mode = "u"
             end
         end
     else
