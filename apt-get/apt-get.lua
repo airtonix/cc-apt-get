@@ -248,7 +248,7 @@ function install(lookingFor)
             if mode == "v" then
                 -- Virtual package : install all following tokens
                 install(token)
-            else
+            else if mode == "p" or mode == "u" then
                 -- Install it
                 print("Selecting previously deselected package " .. package.name)
                 checkPacklist()
@@ -267,13 +267,13 @@ function install(lookingFor)
                     pastebin(package.key, package.directory .. "/" ..package.name)
                 elseif mode == "u" then
                     wget(package.key,  package.directory .. "/" ..package.name)
-                else
-                    print("Wrong mode!!")
                 end
 
                 -- Alias
                 print("Setting up package " .. package.name)
                 shell.setAlias(package.alias, package.directory .. "/" .. package.name)
+            else
+                print("Wrong mode!!")
             end
 
             -- If token is a mode, update the mode variable
