@@ -112,7 +112,7 @@ function setup()
     if mode == "p" then
         defaultApt = "Vt0v208y"
     else
-        defaultApt = "https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua apt/apt-get"
+        defaultApt = "https://raw.github.com/Arqade/cc-apt-get/master/apt-get/source.list"
     end
 
     print("The apt/source.list is using the default settings, please edit if necessary")
