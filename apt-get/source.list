@@ -15,72 +15,72 @@ v left right forward back down up reverse drop level refuelall digup digdown dig
 virtual
 left
 Turns the turtle left
-p UQmPqDZc
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/left.lua
 tools
 l
 right
 Turns the turtle right
-p RSYBt2aE
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/right.lua
 tools
 r
 forward
 Moves the turtle forward
-p 6GPVp2Ka
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/forward.lua
 tools
 f
 back
 Moves the turtle backward
-p 7LjxWUvy
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/backward.lua
 tools
 b
 down
 Moves the turtle down
-p GX8y65xc
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/down.lua
 tools
 d
 up
 Moves the turtle up
-p CmJJdMFa
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/up.lua
 tools
 u
 reverse
 Inverts the turtle orientation
-p DK7s2f9c
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/reverse.lua
 tools
 x
 dig
 Orders the turtle to dig forward
-p zA9xBCL6
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/dig.lua
 tools
-
+dg
 digup
 Orders the turtle to dig up
-p ukFC1pit
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/digup.lua
 tools
-
+dgu
 digdown
 Orders the turtle to dig down
-p n9g2sfjQ
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/digdown.lua
 tools
-
+dgd
 placeforward
 Place item below turtle while forwarding
-p 3rdWwrTu
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/placeforward.lua
 tools
 pf
 level
 Gets turtle fuel level
-p Bi2AS9tq
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/level.lua
 tools
 lvl
 refuelall
 Refuels the turtle with all the stack on the selected slot
-p hMyMs6WS
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/refuelall.lua
 tools
 rfa
 drop
 Empties the turtle
-p ihzq3vcv
+u https://raw.github.com/Arqade/cc-apt-get/master/tools/drop.lua
 tools
 drop
 mining
@@ -88,26 +88,6 @@ A set of mining constructions for Turtles
 v escalier digchunk floorchunk
 
 virtual
-slavecomp
-Enslaves a computer
-p 3rEiVK7e
-rednetctl
-slave
-mastercomp
-Master control computer
-p 0ty4RdiM
-rednetctl
-master
-master-turtle
-Enslaves a computer
-p AinFGwTR
-wolvan
-wctrl
-slave-turtle
-Slave turtle
-p dDbsahn7
-wolvan
-wwait
 escalier
 Digs a staircase
 p LmPNE2Fn
@@ -115,12 +95,12 @@ mining
 
 digchunk
 Dig a chunk (16x16 blocks) on a given height
-p c5bxYBnr
+u https://raw.github.com/Arqade/cc-apt-get/master/mining/digchunk.lua
 mining
 
 floorchunk
 Floors a chunk (16x16) on the layer above
-p Bupi2Ssp
+u https://raw.github.com/Arqade/cc-apt-get/master/mining/floorchunk.lua
 mining
 floorchunk
 nsh
