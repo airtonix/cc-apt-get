@@ -94,32 +94,38 @@ end
 
 function setup()
     -- First time setup
+
+    -- Create apt if not exists
     if not fs.exists("apt") then
         fs.makeDir("apt")
     end
 
-    fs.makeDir("apt")
     local defaultApt
     local mode
+    -- Choosing mode
     while mode ~= "p" or mode ~= "u" do
         print("Downloading from pastebin [p] or github/url [u]")
         mode = read()
     end
 
+    -- Setting defaults
     if mode == "p" then
         defaultApt = "Vt0v208y"
     else
         defaultApt = "https://raw.github.com/Arqade/cc-apt-get/master/apt-get/apt-get.lua apt/apt-get"
     end
 
+    -- Removing old configuration
     if fs.exists(srcFile) then
         fs.delete(srcFile)
     end
 
+    -- Writing new file
     local src = fs.open(srcFile, "w")
     src.writeLine(mode .. " " .. defaultApt)
     src.close()
 
+    -- Creating empty packages files
     p = fs.open(packList, "w")
     p.close()
 end
