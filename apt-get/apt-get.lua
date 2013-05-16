@@ -23,7 +23,7 @@ function wget(url, file)
         file.write(content)
         file.close()
     else
-        print("URL download failed : " .. res.getResponseCode())
+        print("URL download failed")
     end
 end
     
