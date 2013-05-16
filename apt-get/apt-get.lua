@@ -264,9 +264,9 @@ function install(lookingFor)
 
                 -- Download
                 if mode == "p" then
-                    pastebin(package.key, package.directory .. "/" ..package.name)
+                    pastebin(token, package.directory .. "/" ..package.name)
                 elseif mode == "u" then
-                    wget(package.key,  package.directory .. "/" ..package.name)
+                    wget(token,  package.directory .. "/" ..package.name)
                 end
 
                 -- Alias
