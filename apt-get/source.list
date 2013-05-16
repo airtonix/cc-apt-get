@@ -103,6 +103,11 @@ Floors a chunk (16x16) on the layer above
 u https://raw.github.com/Arqade/cc-apt-get/master/mining/floorchunk.lua
 mining
 floorchunk
+mlg-mining
+MLG Mining shaft program
+p DwJDDMJc 
+mining
+
 nsh
 A network shell for Computercraft
 p X5Fysdi4
