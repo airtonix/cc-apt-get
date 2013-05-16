@@ -22,6 +22,8 @@ function wget(url, file)
         local file = fs.open(file, "w")
         file.write(content)
         file.close()
+    else
+        print("URL download failed : " .. res.getResponseCode())
     end
 end
     
