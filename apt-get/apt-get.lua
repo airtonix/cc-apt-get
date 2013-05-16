@@ -122,9 +122,16 @@ function update()
 
     local source = fs.open(srcFile, "r")
     local packKey = source.readLine()
-    source.close()
 
-    pastebin(packKey, packFile)
+
+    token = string.gmatch(packKey, "[^%s]+")
+    if token[1] == "p" then
+        pastebin(packKey, packFile)
+    else 
+        wget(packKey, packFile)
+    end
+
+    source.close()
 end
 
 function list() 
