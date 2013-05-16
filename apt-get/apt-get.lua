@@ -126,9 +126,9 @@ function update()
 
     token = string.gmatch(packKey, "[^%s]+")
     if token[1] == "p" then
-        pastebin(packKey, packFile)
+        pastebin(token[2], packFile)
     else 
-        wget(packKey, packFile)
+        wget(token[2], packFile)
     end
 
     source.close()
