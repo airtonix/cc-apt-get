@@ -130,6 +130,9 @@ function setup()
     -- Creating empty packages files
     p = fs.open(packList, "w")
     p.close()
+
+    -- Install package apt-get
+    install("apt-get")
 end
 
 function update()
