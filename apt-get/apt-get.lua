@@ -272,7 +272,7 @@ function install(lookingFor)
                 -- Alias
                 print("Setting up package " .. package.name)
                 shell.setAlias(package.alias, package.directory .. "/" .. package.name)
-            else
+            elseif mode ~= "none" then
                 print("Wrong mode!!")
             end
 
