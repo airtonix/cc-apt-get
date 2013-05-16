@@ -248,7 +248,7 @@ function install(lookingFor)
             if mode == "v" then
                 -- Virtual package : install all following tokens
                 install(token)
-            else if mode == "p" or mode == "u" then
+            elseif mode == "p" or mode == "u" then
                 -- Install it
                 print("Selecting previously deselected package " .. package.name)
                 checkPacklist()
