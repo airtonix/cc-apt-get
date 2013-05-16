@@ -199,10 +199,10 @@ function upgrade()
                 -- If first token, mode is unset
                 if mode == "p" then
                     print("Upgrading package " .. package.name)
-                    pastebin(package.key, package.directory .. "/" ..package.name)
+                    pastebin(token, package.directory .. "/" ..package.name)
                 elseif mode == "u" then
                     print("Upgrading package " .. package.name)
-                    wget(package.key, package.directory .. "/" ..package.name)
+                    wget(token, package.directory .. "/" ..package.name)
                 end
                 
                 -- Mode checking (first token)
