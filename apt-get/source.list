@@ -115,12 +115,12 @@ travelling
 
 lib-coords
 Travel on high altitude to reach a spot.
-u https://raw.github.com/Arqade/turtle-scripts/master/lib/libcoords
+u https://raw.github.com/Arqade/turtle-scripts/master/lib/lib-coords
 lib
 
 lib-fuel
 Travel on high altitude to reach a spot.
-u https://raw.github.com/Arqade/turtle-scripts/master/lib/fuel
+u https://raw.github.com/Arqade/turtle-scripts/master/lib/lib-fuel
 lib
 
 nsh
