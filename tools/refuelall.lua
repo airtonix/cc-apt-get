@@ -1,1 +1,0 @@
-turtle.refuel(64)
