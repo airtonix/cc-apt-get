@@ -108,6 +108,21 @@ MLG Mining shaft program
 p DwJDDMJc 
 mining
 
+messenger
+Travel on high altitude to reach a spot.
+u https://raw.github.com/Arqade/turtle-scripts/master/travelling/messenger.lua
+travelling
+
+lib-coords
+Travel on high altitude to reach a spot.
+u https://raw.github.com/Arqade/turtle-scripts/master/lib/libcoords
+lib
+
+lib-fuel
+Travel on high altitude to reach a spot.
+u https://raw.github.com/Arqade/turtle-scripts/master/lib/fuel
+lib
+
 nsh
 A network shell for Computercraft
 p X5Fysdi4
