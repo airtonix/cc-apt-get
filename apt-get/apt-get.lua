@@ -297,7 +297,9 @@ if args[1] == "update" then
 elseif args[1] == "list" then
     list()
 elseif args[1] == "install" then
-    install(args[2])
+    for i = 2, #args do
+        install(args[i])
+    end
 elseif args[1] == "remove" then
     print("Unimplemented")
 elseif args[1] == "upgrade" then
