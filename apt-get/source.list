@@ -113,14 +113,14 @@ Travel on high altitude to reach a spot.
 u https://raw.github.com/Arqade/turtle-scripts/master/travelling/messenger.lua
 travelling
 
-lib-coords
+libcoords
 Travel on high altitude to reach a spot.
-u https://raw.github.com/Arqade/turtle-scripts/master/lib/lib-coords
+u https://raw.github.com/Arqade/turtle-scripts/master/lib/libcoords
 lib
 
-lib-fuel
+libfuel
 Travel on high altitude to reach a spot.
-u https://raw.github.com/Arqade/turtle-scripts/master/lib/lib-fuel
+u https://raw.github.com/Arqade/turtle-scripts/master/lib/libfuel
 lib
 
 nsh
