@@ -15,72 +15,72 @@ v left right forward back down up reverse drop level refuelall digup digdown dig
 virtual
 left
 Turns the turtle left
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/left.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/left.lua
 tools
 l
 right
 Turns the turtle right
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/right.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/right.lua
 tools
 r
 forward
 Moves the turtle forward
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/forward.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/forward.lua
 tools
 f
 back
 Moves the turtle backward
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/back.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/back.lua
 tools
 b
 down
 Moves the turtle down
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/down.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/down.lua
 tools
 d
 up
 Moves the turtle up
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/up.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/up.lua
 tools
 u
 reverse
 Inverts the turtle orientation
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/reverse.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/reverse.lua
 tools
 x
 dig
 Orders the turtle to dig forward
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/dig.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/dig.lua
 tools
 dg
 digup
 Orders the turtle to dig up
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/digup.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/digup.lua
 tools
 dgu
 digdown
 Orders the turtle to dig down
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/digdown.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/digdown.lua
 tools
 dgd
 placeforward
 Place item below turtle while forwarding
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/placeforward.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/placeforward.lua
 tools
 pf
 level
 Gets turtle fuel level
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/level.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/level.lua
 tools
 lvl
 refuelall
 Refuels the turtle with all the stack on the selected slot
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/refuelall.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/refuelall.lua
 tools
 rfa
 drop
 Empties the turtle
-u https://raw.github.com/Arqade/cc-apt-get/master/tools/drop.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/tools/drop.lua
 tools
 drop
 mining
@@ -95,12 +95,12 @@ mining
 
 digchunk
 Dig a chunk (16x16 blocks) on a given height
-u https://raw.github.com/Arqade/cc-apt-get/master/mining/digchunk.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/mining/digchunk.lua
 mining
 
 floorchunk
 Floors a chunk (16x16) on the layer above
-u https://raw.github.com/Arqade/cc-apt-get/master/mining/floorchunk.lua
+u https://raw.github.com/Arqade/turtle-scripts/master/mining/floorchunk.lua
 mining
 floorchunk
 mlg-mining
