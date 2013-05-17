@@ -85,7 +85,7 @@ tools
 drop
 mining
 A set of mining constructions for Turtles
-v escalier digchunk floorchunk
+v escalier digchunk floorchunk mlg-mining
 
 virtual
 escalier
