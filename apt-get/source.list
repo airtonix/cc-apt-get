@@ -99,10 +99,15 @@ u https://raw.github.com/Arqade/turtle-scripts/master/mining/digchunk.lua
 mining
 
 floorchunk
-Floors a chunk (16x16) on the layer above
-u https://raw.github.com/Arqade/turtle-scripts/master/mining/floorchunk.lua
-mining
+Floors a chunk (16x16) on the layer below
+u https://raw.github.com/Arqade/turtle-scripts/master/building/floorchunk.lua
+building
 floorchunk
+floorplace
+Floors a place (lxw) on the layer below
+u https://raw.github.com/Arqade/turtle-scripts/master/building/floorplace.lua
+building
+floorplace
 mlg-mining
 MLG Mining shaft program
 p DwJDDMJc 
